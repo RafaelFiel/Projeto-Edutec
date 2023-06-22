@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/icons8-sol-16 (1).png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/maps/maps.css'>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/maps/maps-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/services/services-web.min.js"></script>
+    <title>Clima Mundo</title>
+
+    <style>
+        #map {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        #container_menu {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: fit-content;
+            border-radius: 5px;
+            top: 0;
+            right: 0;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        #container_menu label {
+            border-bottom: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        #container_menu input {
+            margin-right: 5px;
+        }
+
+        #voltar {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: #fff;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #voltar img {
+            width: 32px;
+            margin: 8px;
+        }
+
+        a:link,
+        a:visited {
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:link:active,
+        a:visited:active {
+            color: #000;
+        }
+
+        #legenda {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-bottom: 30px;
+            margin-right: 10px;
+            padding: 5px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .id_clima {
+            font-size: 13px;
+            width: 100px;
+            white-space: nowrap;
+            margin-right: 5px;
+        }
+
+        .container_scala {
+            width: 260px;
+            flex-direction: column;
+        }
+
+        .scala {
+            display: flex;
+            font-size: 10px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .gradiente {
+            border-radius: 5px;
+            height: 4px;
+            opacity: 0.9;
+            background-image: linear-gradient(to right, rgb(159, 85, 181) 0%, rgb(44, 106, 187) 8.75%, rgb(82, 139, 213) 12.5%, rgb(103, 163, 222) 18.75%, rgb(142, 202, 240) 25%, rgb(155, 213, 244) 31.25%, rgb(172, 225, 253) 37.5%, rgb(194, 234, 255) 43.75%, rgb(255, 255, 208) 50%, rgb(254, 248, 174) 56.25%, rgb(254, 232, 146) 62.5%, rgb(254, 226, 112) 68.75%, rgb(253, 212, 97) 75%, rgb(244, 168, 94) 82.5%, rgb(244, 129, 89) 87.5%, rgb(244, 104, 89) 93.75%, rgb(244, 76, 73) 100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+    <div id="voltar"><a href="../html/inicio.html"><img src="../assets/back_89271.png" alt=""></a></div>
+    <div id="container_menu">
+        
+        <label><a href="../html/mapa_temp.html"><input type="radio" name="a" id="temperatura" checked>Temperatura</a></label>
+        <label><a href="../html/mapa_chuva.html"><input type="radio" name="a" id="chuva">Chuva</a></label>
+        <label><a href="../html/mapa_vento.html"><input type="radio" name="a" id="vento">Vento</a></label>
+        <label><a href="../html/mapa_nuvem.html"><input type="radio" name="a" id="nuvens">Nuvem</a></label>
+
+    </div>
+
+    <div id="legenda">
+        <div class="id_clima">Temperatura °C</div>
+        <div class="container_scala">
+            <div class="scala">
+                <div>-40</div>
+                <div>-20</div>
+                <div>0</div>
+                <div>20</div>
+                <div>40</div>
+            </div>
+            <div class="gradiente"></div>
+        </div>
+    </div>
+
+    <script>
+
+       
+
+        let map = tt.map({
+            key: 'MfKGrnUpAha7e7ztdtWMj5oSodNplfEH',
+            container: 'map',
+            zoom: 2,
+            language: 'pt-BR'
+        })
+
+        let tempSource = {
+            type: 'raster',
+            tiles: ['https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=71250ac0754ab1507dbd992bbae43d95'],
+            tileSize: 256,
+            minZoom: 0,
+            maxZoom: 12,
+            atribute: 'OpenWeatherMap.Org'
+        }
+
+        let tempLayer = {
+            'id': 'temp_layer',
+            'type': 'raster',
+            'source': 'temp_source',
+            'layout': { 'visibility': 'visible' }
+        }
+
+        map.on('load', function () {
+
+            map.addSource('temp_source', tempSource)
+            map.addLayer(tempLayer)
+
+        })
+    </script>
+</body>
+
+</html>

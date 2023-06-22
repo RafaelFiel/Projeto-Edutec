@@ -1,0 +1,21 @@
+.container_footer{
+    height: 15vh;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links_foter{
+    list-style: none;
+}
+
+.link_footer{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.footer .copyright{
+    color: #fff;
+}   

@@ -1,0 +1,92 @@
+{
+    "questoes":[
+       {
+          "numQuestao":0,
+          "pergunta":"pergunta",
+          "alternativaA":"Alternativa A",
+          "alternativaB":"Alternativa B",
+          "alternativaC":"Alternativa C",
+          "correta":"0"
+       },
+       {
+          "numQuestao":1,
+          "pergunta":"O que é tempo?",
+          "alternativaA":"A) Uma condição atual da atmosfera",
+          "alternativaB":"B) Um conjunto de condições atmosféricas",
+          "alternativaC":"C) A temperatura normal de um ambiente",
+          "correta":"A) Uma condição atual da atmosfera"
+       },
+       {
+          "numQuestao":2,
+          "pergunta":"O que é clima?",
+          "alternativaA":"A) Escala de calor de um ambiente",
+          "alternativaB":"B) Conjunto de elementos atmosféricos por um longo tempo",
+          "alternativaC":"C) Efeito dos raios solares sobre a terra",       
+          "correta":"B) Conjunto de elementos atmosféricos por um longo tempo"
+       },
+       {
+          "numQuestao":3,
+          "pergunta":"O que é um ciclone?",
+          "alternativaA":"A) Um centro de baixa pressão atmosférica que forma tempestades",
+          "alternativaB":"B) Um nome científico adotado para representar os tornados",
+          "alternativaC":"C) Uma concentração de furacões em uma região",          
+          "correta":"A) Um centro de baixa pressão atmosférica que forma tempestades"
+       },
+       {
+          "numQuestao":4,
+          "pergunta":"O que é pressão atmosférica?",
+          "alternativaA":"A) O peso que o ar faz sobre a terra",
+          "alternativaB":"B) Uma condição momentânea da atmosfera",
+          "alternativaC":"C) O acúmulo de gases poluentes dentro da nossa atmosfera",   
+          "correta":"A) O peso que o ar faz sobre a terra"
+       },
+       {
+          "numQuestao":5,
+          "pergunta":"O que é temperatura?",
+          "alternativaA":"A) O efeito dos raios solares sobre uma região",
+          "alternativaB":"B) Emissão natural de gases em uma região",
+          "alternativaC":"C) Escala de calor de um ambiente",
+          "correta":"C) Escala de calor de um ambiente"
+       },
+       {
+          "numQuestao":6,
+          "pergunta":"O que é umidade?",
+          "alternativaA":"A) Excesso de calor ambiente",
+          "alternativaB":"B) Um centro de alta pressão atmosférica",
+          "alternativaC":"C) Quantidade de água em forma de vapor em um ambiente",  
+          "correta":"C) Quantidade de água em forma de vapor em um ambiente"
+       },
+       {
+          "numQuestao":7,
+          "pergunta":"O que é o efeito estufa?",
+          "alternativaA":"A) O efeito dos raios do sol sobre a terra",
+          "alternativaB":"B) A concentração natural de gases dentro da atmosfera",
+          "alternativaC":"C) Excesso de elevações de temperatura devido a emissão de gases ",       
+          "correta":"B) A concentração natural de gases dentro da atmosfera"
+       },
+       {
+          "numQuestao":8,
+          "pergunta":"O que é o aquecimento global?",
+          "alternativaA":"A) Elevação anormal de temperatura devido a emissão excessiva de gases na atmosfera",
+          "alternativaB":"B) Acúmulo natural de gases na atmosfera",
+          "alternativaC":"C) Efeito dos raios ultravioleta sobre a terra",         
+          "correta":"A) Elevação anormal de temperatura devido a emissão excessiva de gases na atmosfera"
+       },
+       {
+          "numQuestao":9,
+          "pergunta":"Escolha a alternativa que apresenta a ordem certa das estações do ano:",
+          "alternativaA":"A) Primavera, outono, verão e inverno",
+          "alternativaB":"B) Outono, verão, inverno e primavera",
+          "alternativaC":"C) Verão, outono, inverno e primavera",         
+          "correta":"C) Verão, outono, inverno e primavera"
+       },
+       {
+          "numQuestao":10,
+          "pergunta":"Quais são os elementos climáticos?",
+          "alternativaA":"A) Tempo, radiação solar e umidade",
+          "alternativaB":"B) Pressão atmosférica, temperatura, radiação solar e umidade",
+          "alternativaC":"C) Temperatura e umidade",
+          "correta":"B) Pressão atmosférica, temperatura, radiação solar e umidade"
+       }
+    ]
+ }

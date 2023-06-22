@@ -1,0 +1,26 @@
+.main, .main_description{
+    padding-top: 5.5rem;
+}
+
+.main .main_description{
+    width: 1090px;
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.main .main_description .main_description_content h2{
+    padding: 0 45px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.main .main_description .main_description_content p{
+    padding: 0 45px;
+    margin: 7px;
+}
+
+.main .main_description .video{
+    padding: 0 45px;
+    margin-top: 47px;
+}
+

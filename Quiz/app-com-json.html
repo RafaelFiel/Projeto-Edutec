@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons8-sol-16 (1).png" type="image/x-icon">
+    <title>Clima Mundo</title>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/app-com-json.css"/>
+</head>
+<body>
+    <header class="main_header">
+        <section class="main_header_cont">
+
+            <article class="main_header_title_right">
+                <a href="../html/inicio.html"><img src="images/marca-x.png" alt="Sair"></a>
+            </article>
+
+            <article class="main_header_title">
+                <h1>Quiz</h1>
+                <img src="images/trophy.png" alt="Troféu">
+            </article>
+    
+           
+        </section>  
+    </header>
+
+    <main class="tela-principal">
+        <section class="conteudos">
+            
+            <article id='instrucoes' class='placar'>
+                Leia e selecione a alternativa correta
+            </article>
+
+            <article class="questao">
+
+                <header class="topoQuestao">
+                    <span id='nQuestao'>?</span>
+                    <h2 id='pergunta'>???</h2>
+                </header>
+
+                <div class='corpoQuestao'>
+                    <ol class='alternativas'>
+                        <li id="a" value="1A" class='letras' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id="b" value="1B" class='letras' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id="c" value="1C" class='letras' onClick='verificarSeAcertou(this, this)'></li>
+                    </ol>
+                </div>
+
+                <footer id='aviso' class='rodapeQuestao centro'>
+                        <span id='numero'></span>
+                        de <span id='total'></span>
+                </footer>
+
+            </article>
+        </section>
+
+    </main>
+
+    <audio src="assets/WINS.mp3" id='somAcerto'></audio>
+    <audio src="assets/LOSS.mp3" id='somErro'></audio>
+    <audio src="assets/FINISH.mp3" id='somAplausos'></audio>
+
+    <input type="hidden" id='correct' name='correct' value='' />
+    <!-- JS EXTERNO -->
+    <script src="js/app-com-json.js"></script>
+</body>
+</html>

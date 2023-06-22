@@ -1,0 +1,43 @@
+.main, .main_description{
+    padding-top: 5.5rem;
+}
+
+.main .main_description{
+    width: 1090px;
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.main .main_description .main_description_content h1{
+    margin-bottom: 20px;
+}
+
+.main .main_description .main_description_content h2{
+    padding: 0 45px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.main .main_description .main_description_content p{
+    padding: 0 45px;
+    margin: 7px;
+    margin-bottom: 5px;
+}
+
+.main .main_description .main_description_ilustration{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.main .main_description .main_description_ilustration .neve img{
+    width: 560px;
+    padding: 0 45px;
+}
+
+.main .main_description .main_description_ilustration .video{
+    padding: 0 45px;
+}
+
+

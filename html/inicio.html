@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/icons8-sol-16 (1).png">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Clima Mundo</title>
+</head>
+
+<body>
+    <header class="main_header">
+        <div class="main_header_content">
+            <figure>
+                <img src="../imagens/grande.png" alt="Logo">
+            </figure>
+
+            <nav class="main_header_content_menu">
+                <ul>
+                    <li><a href="inicio.html">Início</a></li>
+                    <li href="#">|</li>
+                    <li><a href="mapa_default.html">Mapa</a></li>
+                    <li href="#">|</li>
+                    <li><a href="../Edu Tec/clima_tempo.html">Conteúdo</a></li>
+                    <li href="#">|</li>
+                    <li><a href="../Quiz/recepcao.html">Quiz</a></li>
+                    <li href="#">|</li>
+                    <li><a href="../Sobrenos/index.html">Sobre nós</a></li>
+                    <li href="#">|</li>
+                    <li><a href="../a-main/feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="main_div_pesquisa">
+            <input type="search" name="q" class="input_pesquisa" placeholder="Pesquise por uma cidade">
+
+            <button type="submit" class="botao_pesquisa"><img class="icone_search" src="../assets/search.png"
+                    alt="Icone de busca"></button>
+        </section>
+
+        <section class="container">
+            <div class="cidade"></div>
+            <div class="date"></div>
+            <article class="container_temperatura">
+                <div class="numero"></div>
+                <div class="container_imagem">
+                    <div class="img_clima"></div>
+                    <div class="descricao"></div>
+                </div>
+            </article>
+            <article class="info">
+                <div class="min max"></div>
+                <div class="vento"></div>
+                <div class="umidade"></div>
+            </article>
+        </section>
+
+
+        <section class="main_section_mapa">
+            <div class="container_texto_mapa">
+                <h2>Mapas</h2>
+                <p>Veja os mapas ao vivo</p>
+                <a href="mapa_default.html"><button>Ver mapas</button></a>
+            </div>
+        </section>
+
+
+        <section class="main_section_conteudo">
+            <div class="first_conteudo">
+                <h2>Climatologia</h2>
+                <p>A climatologia é um dos ramos da Geografia física que estuda o clima e o tempo. Esta ciência se
+                    dedica
+                    aos estudos dos fenômenos climáticos, classificação dos climas e a interferência das ações dos seres
+                    humanos no clima mundial. Apredenda mais sobre a climatologia.</p>
+                <a class="link_botao" href="../Edu Tec/clima_tempo.html"><button>Conteúdo</button></a>
+            </div>
+
+            <div class="second_conteudo">
+                <img class="img_conteudo" src="../assets/conteudo-removebg.png" alt="">
+            </div>
+        </section>
+
+        <section class="fundo_quiz">
+            <div class="main_section_quiz">
+                <div class="first_quiz">
+                    <h2>Quiz</h2>
+                    <p>Teste seus conhecimentos sobre climatologia com este quiz.</p>
+                    <a class="link_botao" href="../Quiz/app-com-json.html"><button>Quiz</button></a>
+                </div>
+                <div class="second_quiz">
+                    <img class="img_quiz" src="../assets/quiz.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="main_sobre_nos">
+            <div class="first_sobre"><img class="img_sobre" src="../assets/about us.png" alt=""></div>
+            <div class="second_sobre">
+                <h2>Sobre nós</h2>
+                <p>Conheça a nossa equipe</p>
+                <a class="link_botao" href="../Sobrenos/index.html"><button>Ver</button></a>
+            </div>
+        </section>
+
+        <section class="main_feedback">
+            <div class="first-feedback">
+                <h2>Feedback</h2>
+                <p>Nos envie o seu feedback para nos ajudar a melhorar</p>
+                <a class="link_botao" href="../a-main/feedback.html"><button>Feedback</button></a>
+            </div>
+            <div class="second_feedback"><img class="img_fedback" src="../assets/feedback.jpg" alt=""></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container_footer">
+            <div class="footer-logo ">
+                <a href="#"><img src="../imagens/grande.png" alt="Logo"></a>
+            </div>
+           
+            <div class="copyright">
+                <p><small>&copy;2022 Climamundo. Todos os direitos reservados.</small></p>
+            </div>
+        </div>    
+    </footer>
+    <script src="../js/temperatura.js"></script>
+</body>
+
+</html>
